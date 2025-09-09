@@ -150,6 +150,11 @@ dt,
    font-weight: bold;  
 }
 
+dt, 
+li {
+padding: 0.5em; 
+}
+
 ul li {
     list-style: none; 
 }
