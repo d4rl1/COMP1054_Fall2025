@@ -40,7 +40,7 @@ h1,
 h2,
 h3 {
   color: var(--ink);
-  font-family: "Chelsea Market", system-ui;
+  font-family: var(--headings);
 }
 
 /* Header */
