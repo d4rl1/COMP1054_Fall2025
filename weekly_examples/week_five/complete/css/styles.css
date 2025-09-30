@@ -4,6 +4,7 @@
     --ink: #e8eaed;
     --muted: #9aa0a6;
     --brand: #4f8cff;
+    --button-bg: #222730;
 }
 
 * {
@@ -23,31 +24,29 @@ a {
 }
 
 section {
-    padding: 48px 16px;
+    padding: 4rem 1rem;
 }
-
 
 /* Flexbox Stuff starts here! */
 
 /* Example One - Header: one row, aligned ends */
 
 .site-header {
-    /* one-dimensional: row by default */
-    display: flex;
-    /* cross-axis alignment (y) */
-    align-items: center;
-    /* main-axis distribution (x) */
-    justify-content: space-between;
-    gap: 2rem;
     padding: 1rem;
     background: var(--panel);
     position: sticky;
     top: 0;
+    display: flex;
+    gap: 2rem; 
+    /*cross-axis alignment */ 
+    align-items: center; 
+    /* main-axis alignment */
+    justify-content: space-between; 
 }
 
 .main-nav {
-    display: flex;
-    gap: 1rem;
+    display:flex; 
+    gap: 1rem; 
 }
 
 .signin {
@@ -64,17 +63,14 @@ section {
 
 /* Example Two - Hero: column alignment, centered */
 .hero {
-    /* new flex formatting context */
-    display: flex;
-    /* one-dimensional: column */
-    flex-direction: column;
-    /* cross axis (x) now centers elements */
-    align-items: center;
     text-align: center;
-    gap: 16px;
+    gap: 1rem;
     max-width: 900px;
     margin-inline: auto;
     padding: 5rem 1rem; 
+    display: flex; 
+    flex-direction:column;  
+    align-items:center; 
 }
 
 .hero h1 {
@@ -88,15 +84,16 @@ section {
 }
 
 .cta-row {
-    display: flex;
-    gap: 1rem;
+   display: flex; 
+   gap: 1rem; 
 }
 
 .btn {
     padding: 0.75rem 1rem; 
     border-radius: 10px;
     background: #222730;
-    border: 1px solid #2a2f37;
+    border: 1px solid #2a2f37
+
 }
 
 .btn.primary {
@@ -105,33 +102,29 @@ section {
     border-color: transparent;
 }
 
-
 /* Example Three - Feature row: flexible sizing */
 
 .features {
-    display: flex;
-    gap: 1rem; 
     padding: 2rem; 
     max-width: 1100px;
     margin-inline: auto;
-    /* allow wrapping on small screens */
+    display: flex; 
     flex-wrap: wrap;
-    
+    gap: 2rem;  
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     gap: 8px;
-    padding: 16px;
+    padding: 1rem;
     background: var(--panel);
     border: 1px solid #222730;
-    border-radius: 12px;
-    /* The magic: one-dimensional flexible width */
-    flex: 1 1 260px;
-    /* grow | shrink | basis */
-    min-width: 220px;
-    /* guard against micro cards */
+    border-radius: 12px; 
+    flex: 1 1 260px; /* shorthand - grow, shrink, basis */ 
+    min-width: 220px; /* guard against really small cards */
+    display:flex; 
+    flex-direction:column; 
+    min-height: 320px; 
+    justify-content: space-between;   
 }
 
 .card h3 {
@@ -144,23 +137,9 @@ section {
     color: var(--muted);
 }
 
-
-/* Example Four - Alignment variations */
-
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 1rem;
-    background: var(--panel);
-    border: 1px solid #222730;
-    border-radius: 12px;
-    /* The magic: one-dimensional flexible width */
-    flex: 1 1 260px;
-    /* grow | shrink | basis */
-    min-width: 220px;
-    /* guard against micro cards */
-    justify-content: space-between;
-    /* spreads first child to top, last child to bottom */
-    min-height: 320px
+/* Featured Card - different grow/shrink/basis */ 
+.featured {
+    flex: 1 0 320px; 
+    background-color: #BADA55; 
+    min-width: 240px; 
 }
