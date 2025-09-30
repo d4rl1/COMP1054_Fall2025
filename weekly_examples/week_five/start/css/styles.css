@@ -55,7 +55,6 @@ section {
 
 /* Example Two - Hero: column alignment, centered */
 .hero {
-    align-items: center;
     text-align: center;
     gap: 1rem;
     max-width: 900px;
