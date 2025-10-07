@@ -116,10 +116,46 @@ p {
 
 
 /************* Example One - Defining Your Grid ****************/
-
+.ex1 .container {
+    display: grid;
+    /*grid-template-columns: 400px 200px 100px;
+    grid-template-rows: 100px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3 , 1fr); */
+    gap : 1rem;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
 
 /*********** Example 2 - Placing Items on the Grid  **************************/
-
+    .ex2 .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    }
+    .ex2 header{
+        /*grid-column: 1/3;
+        grid-row: 1/2;
+    */
+        grid-area: header;
+    }
+    .ex2 main {
+        /*grid-column: 1/3;
+        grid-row: 2/3;*/
+        grid-area: main;
+    }
+    .ex aside{
+        grid-area: aside;
+    }
+    .ex2 footer {
+        grid-area: footer;
+        /*
+        grid-column: 2/3;
+         */
+    }
 
 /*********** Example 3 - Alignment with CSS Grid **************************/
 
