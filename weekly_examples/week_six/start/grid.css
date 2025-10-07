@@ -160,11 +160,37 @@ p {
 /*********** Example 3 - Alignment with CSS Grid **************************/
 
 /* Try It - Recreate the layout shown by placing the items on the grid */
-
-
+.ex3 .container {
+    display: grid;
+    grid-template-areas:
+    "blue blue sage"
+    "yellow orange sage";
+}
+.ex3 .blue{
+    grid-area: blue;
+}
+.ex3 .yellow{
+    grid-area: yellow;
+}
+.ex3 .orange{
+    grid-area: orange;
+}
+.ex3 .sage{
+    grid-area: sage;
+}
 
 /********** Example 4 - Subgrid  ************************/
+.ex4 .parent-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.ex4 .subgrid > div{
 
+}
 
 
 /* example adapted from https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids */
